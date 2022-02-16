@@ -8,20 +8,13 @@ new p5(function (p5) {
   };
 
   p5.draw = function () {
-    p5.background(55, 0, 0);
-    //drawEllipse(p5);
-    let pg = p5.createGraphics(500, 500);
-    try {
-      var pg2 = p5.createGraphics(200, 200);
-    } catch (error) {
-      console.log("error");
-    }
-    pg2.fill(0, 0, 255);
-    pg2.ellipse(20, 20, 20);
-    pg.square(100, 100, 100);
-    const it = "T"[Symbol.iterator]();
+    p5.background(0, 0, 255);
+    let pg = p5.createGraphics(1000, 1000);
+    const it = "T[IT[IIII]II]"[Symbol.iterator]();
+    //pg.background(0, 255, 0)
     stringInterpreter(p5, pg, it);
-    //p5.image(pg, 500, 0);
-    p5.image(pg2, 0, 0);
+    pg.fill(0, 255, 0);
+    pg.ellipse(100, 100, 50, 50);
+    p5.image(pg, 0, 0);
   };
 });
