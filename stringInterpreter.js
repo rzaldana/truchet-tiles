@@ -7,6 +7,11 @@ const dictionary = {
     pg.fill(255, 0, 0);
     pg.ellipse(pg.width/2, pg.height/2, pg.width/2);
   },
+  R: (p5, pg, it) => {
+    pg.fill(0, 0, 255);
+    pg.square(pg.width/3, pg.height/3, pg.width/3);
+  },
+  X: (p5, pg, it) => { return },
   T: function (p5, pg, it) {
     var char = it.next();
     // create 4 PGraphics object
@@ -29,6 +34,7 @@ const dictionary = {
       new_pg.background(Math.random()*255, 0, 0);
       stringInterpreter(p5, new_pg, it);
       pg.image(new_pg, x_loc, y_loc);
+      i++;
 
     }
   },
